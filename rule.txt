@@ -1,4 +1,4 @@
-rule shahrirhensem: banker
+rule test: test2
 {
     meta:                                        
         description = "This is just an example"
@@ -7,7 +7,7 @@ rule shahrirhensem: banker
 
     strings: 
         $a = /[a-z][test]z{3,}a{2,}[gilo]/
-        $b = /joloko/
+        $b = /opssszz/
     condition:
         $a or $b
 }
