@@ -124,7 +124,7 @@ fclose($fh);
     	  <h1>G-YARA</h1>            
                 <textarea name="content" rows="40" id="content" style="width:60%;height:300px"></textarea>	    
                 <textarea name="rule" rows="40" id="rule" style="width:38%;height:300px;display:inline-block"><?php echo $theData; ?></textarea> <br />
-                <button id="post" class="btn">CHECK</button> <button id="postx" class="btn">Scan With MyYaraSIG Rules</button><br /><br />
+                <button id="post" class="btn">CHECK</button> <button id="postx" class="btn">Scan With Local Rules</button><br /><br />
                 
                  
        <h2>Regex quick reference</h2>    
