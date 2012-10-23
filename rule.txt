@@ -1,0 +1,13 @@
+rule shahrirhensem: banker
+{
+    meta:                                        
+        description = "This is just an example"
+        thread_level = 3
+        in_the_wild = true
+
+    strings: 
+        $a = /[a-z][test]z{3,}a{2,}[gilo]/
+        $b = /joloko/
+    condition:
+        $a or $b
+}
