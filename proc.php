@@ -6,6 +6,29 @@
 include("config.php");
 //--------------------------------
 
+if (get_magic_quotes_gpc())
+{
+   $process = array(&$_POST);
+
+    while (list($key, $val) = each($process))
+    {
+       foreach ($val as $k => $v)
+       {
+          unset($process[$key][$k]);
+          if (is_array($v))
+          {
+             $process[$key][stripslashes($k)] = $v;
+             $process[] = &$process[$key][stripslashes($k)];
+          }
+          else
+          {
+             $process[$key][stripslashes($k)] = stripslashes($v);
+          }
+       }
+    }
+    unset($process);
+}
+
 if (isset($_POST['rule'])){
 	
 	$fh = fopen($ruleFile, 'w') or die("can't open file");
@@ -36,7 +59,7 @@ if (isset($_POST['ayat'])){
 					</p>
 					</div>';	
 	}else{
-		$a = str_replace("$dumpFile","",$a);
+		$a = str_replace("$dumpPath","",$a);
 		
 		$notice = '<div class="ui-state-error ui-corner-all" >
 					<p>
