@@ -18,8 +18,7 @@ fclose($fh);
   <head>
     <meta charset="utf-8">
     <title>G-YARA</title>
-    <meta name="description" content="A preview of the jQuery UI Bootstrap theme">
-    <meta name="author" content="Addy Osmani">
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
