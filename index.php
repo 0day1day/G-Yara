@@ -282,10 +282,11 @@ fclose($fh);
                 function(responseText){  
                  
                     $("#result").html(responseText);  
+                    $("#post").removeAttr("disabled");
                 },  
                 "html"  
             );
-            $("#post").removeAttr("disabled");
+           
         });  
     
       $("#postx").click(function(){  
@@ -297,11 +298,12 @@ fclose($fh);
                 function(responseText){  
                  
                     $("#result").html(responseText);  
+                    $("#postx").removeAttr("disabled");
                 },  
                 "html"  
             );
     
-            $("#postx").removeAttr("disabled");
+            
         });
         </script>
   </body>
